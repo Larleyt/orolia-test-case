@@ -1,0 +1,15 @@
+# Pendulum Instruments AB, TimeView32 V1.01
+# FREQUENCY A
+# Mon May 12 13:13:23 2003
+# Measuring time: 10 ms                       Single: Off
+# Input A: Auto, 1Mê, AC, X1, Pos             Filter: Off
+# Input B: Auto, 1Mê, AC, X1, Pos             Common: Off
+# Ext.arm: Off                                Ref.osc: Internal
+# Hold off: Off                               Statistics: Off
+3.2334289000000e-001 1.0000635974181e+007
+3.3344650000000e-001 9.9972629997909e+006
+3.4355038000000e-001 1.0004753625599e+007
+3.5365424000000e-001 9.9931523616595e+006
+3.6375824000000e-001 1.0008868437243e+007
+3.7386200000000e-001 9.9890716094258e+006
+3.8396600000000e-001 1.0012935803008e+007

@@ -1,0 +1,3 @@
+Flask
+matplotlib
+-e git+https://github.com/mpld3/mpld3.git@master#egg=mpld3
