@@ -25,12 +25,22 @@ export default class App extends Component {
     }
 
     this.showPlot = this.showPlot.bind(this);
+    this.addElement = this.addElement.bind(this);
     this.deleteElement = this.deleteElement.bind(this);
   }
 
   showPlot(path) {
     if (this.state.currentPath !== path) {
       this.setState({currentPath: path})
+    }
+  }
+
+  addElement(e, new_val) {
+    e.preventDefault()
+    if (!this.state.items.includes(new_val)) {
+      this.setState(prevState => ({
+        items: prevState.items.concat(new_val)
+      }));
     }
   }
 
@@ -61,7 +71,7 @@ export default class App extends Component {
         {this.state.currentPath !== null
         ? <MPLD3 src={API_ROOT + "?path=" + this.state.currentPath} />
         : null}
-        <SimpleReactFileUpload src={API_ROOT}/>
+        <SimpleReactFileUpload src={API_ROOT} addElement={this.addElement}/>
       </div>
     );
   }

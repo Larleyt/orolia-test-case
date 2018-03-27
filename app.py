@@ -58,7 +58,6 @@ def index():
 class FileAPI(MethodView):
     def get(self):
         path = request.args.get('path')
-        print(path)
         try:
             plt = get_plot(path)
         except TypeError as e:
@@ -78,8 +77,9 @@ class FileAPI(MethodView):
 
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-            return redirect(url_for("files", filename=filename))
+            filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
+            file.save(filepath)
+            return jsonify({"filepath": filepath}, 201)
         raise BadRequest
 
     def delete(self, fpath):
