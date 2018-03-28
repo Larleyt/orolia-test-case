@@ -35,8 +35,10 @@ export default class App extends Component {
   }
 
   addElement(e, new_val) {
-    e.preventDefault()
-    if (!this.state.items.includes(new_val)) {
+    if (
+      new_val &&
+      !this.state.items.includes(new_val)
+    ) {
       this.setState(prevState => ({
         items: prevState.items.concat(new_val)
       }));

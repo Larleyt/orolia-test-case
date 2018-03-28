@@ -20,7 +20,7 @@ def get_plot(fpath):
     plt.scatter(tags, vals, s=1)
     plt.title("Plot: {}".format(fpath.split("/")[-1]))
     plt.xlabel("Tag")
-    plt.ylabel("Value", labelpad=20)
+    plt.ylabel("Value", labelpad=8)
 
     plt_dict = mpld3.fig_to_dict(plt.gcf())
     plt.clf()

@@ -52,7 +52,7 @@ def index():
         for r, d, f in os.walk(app.config["UPLOAD_FOLDER"])
         for file in f
     ]
-    return render_template("index.html", path_list=path_list)
+    return render_template("index.html", path_list=sorted(path_list))
 
 
 class FileAPI(MethodView):
