@@ -3,11 +3,10 @@ import MPLD3 from './MPLD3'
 import SimpleReactFileUpload from './file-upload.js'
 
 
-const API_ROOT = "http://localhost:5000/api/files/"
+const API_ROOT = "/api/files/"
 
 
 function deleteData(url, item) {
-  console.log(url + item)
   return fetch(url + item, {
     method: 'delete'
   })
